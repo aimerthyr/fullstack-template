@@ -1,0 +1,19 @@
+{
+  "name": "fullstack-template",
+  "description": "Template for Fullstack Monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:server": "pnpm --filter server start:dev",
+    "build:server": "pnpm --filter server build",
+    "dev:web": "pnpm --filter web dev",
+    "build:web": "pnpm --filter web build"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.3"
+  }
+}
