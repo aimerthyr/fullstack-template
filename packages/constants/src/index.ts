@@ -1,1 +1,1 @@
-export const NAME = 'fullstack-template';
+export const NAME = 'fullstack-template'

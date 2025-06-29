@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { add } from '@internal/utils';
+import { add } from '@internal/utils'
 import HelloWorld from './components/HelloWorld.vue'
-console.log(add(1,2))
+
+console.log(add(1, 2))
 </script>
 
 <template>
