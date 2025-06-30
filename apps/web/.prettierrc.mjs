@@ -6,6 +6,7 @@ import baseConfig from '../../.prettierrc.mjs'
 const config = {
   ...baseConfig,
   htmlWhitespaceSensitivity: 'ignore',
+  plugins: baseConfig.plugins.concat('prettier-plugin-tailwindcss'),
 }
 
 export default config
