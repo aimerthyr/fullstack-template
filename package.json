@@ -11,19 +11,27 @@
     "build:server": "pnpm --filter server build",
     "dev:web": "pnpm --filter web dev",
     "build:web": "pnpm --filter web build",
-    "prettier": "prettier -w .",
+    "format": "prettier -w .",
+    "lint": "eslint --fix . && pnpm --filter web lint",
     "prepare": "husky"
   },
   "devDependencies": {
+    "@eslint/js": "^9.30.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.4.2",
+    "eslint": "^9.30.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "globals": "^16.2.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
     "prettier": "3.6.2",
     "rimraf": "^6.0.1",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.35.0"
   },
   "lint-staged": {
-    "*.{js,ts,tsx,vue,md,json}": [
+    "*.{js,mjs,ts,tsx,vue,md,json}": [
+      "eslint --fix",
       "prettier -w --ignore-unknown"
     ]
   }
