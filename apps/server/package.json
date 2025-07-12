@@ -6,16 +6,21 @@
     "clean": "rimraf dist",
     "prebuild": "pnpm run clean",
     "build": "nest build",
-    "start:prod": "node dist/apps/server/src/main",
-    "start:dev": "nest start --watch"
+    "start:prod": "NODE_ENV=production node dist/apps/server/src/main",
+    "start:dev": "docker compose --env-file .env.development up -d &&  nest start --watch --debug --inspect-brk=0.0.0.0:9229"
   },
   "dependencies": {
     "@internal/constants": "workspace:*",
     "@internal/types": "workspace:*",
     "@internal/utils": "workspace:*",
     "@nestjs/common": "^11.0.1",
+    "@nestjs/config": "^4.0.2",
     "@nestjs/core": "^11.0.1",
+    "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^11.0.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.2",
+    "pg": "^8.16.3",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1"
   },

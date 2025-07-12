@@ -7,13 +7,7 @@ export default defineConfig([
   baseConfig,
   {
     name: 'app/files-to-ignore',
-    ignores: [
-      '**/dist/',
-      '**/temp/',
-      '**/coverage/',
-      '.eslintrc-auto-import.json',
-      'auto-imports.d.ts',
-    ],
+    ignores: ['**/dist/', '**/temp/', '**/coverage/', 'auto-imports.d.ts'],
   },
   defineConfigWithVueTs(pluginVue.configs['flat/essential'], vueTsConfigs.recommended),
   {

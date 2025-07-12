@@ -16,7 +16,8 @@
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": true,
     "strictBindCallApply": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "strict": false
   },
-  "include": ["src/**/*.ts", "../../packages"]
+  "include": ["src/**/*.ts", "./global.d.ts", "../../packages"]
 }

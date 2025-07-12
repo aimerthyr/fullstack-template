@@ -102,6 +102,7 @@ export default defineConfig([
           argsIgnorePattern: '^_',
         },
       ],
+      'spaced-comment': ['error', 'always'],
     },
   },
   // vue 推荐配置

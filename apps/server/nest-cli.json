@@ -5,5 +5,8 @@
   "entryFile": "apps/server/src/main",
   "compilerOptions": {
     "deleteOutDir": true
+  },
+  "generateOptions": {
+    "spec": false
   }
 }

@@ -62,5 +62,4 @@ dist-ssr
 *.local
 
 # custom files
-.eslintrc-auto-import.json
 auto-imports.d.ts
