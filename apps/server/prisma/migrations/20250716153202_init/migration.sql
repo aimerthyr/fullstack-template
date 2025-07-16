@@ -1,12 +1,5 @@
--- CreateTable
-CREATE TABLE "user" (
-    "id" SERIAL NOT NULL,
-    "email" TEXT NOT NULL,
-    "name" TEXT,
-    "title" TEXT NOT NULL,
-
-    CONSTRAINT "user_pkey" PRIMARY KEY ("id")
-);
+-- CreateEnum
+CREATE TYPE "UserRole" AS ENUM ('ADMIN', 'NORMAL');
 
 -- CreateTable
 CREATE TABLE "post" (
@@ -15,8 +8,20 @@ CREATE TABLE "post" (
     "content" TEXT,
     "published" BOOLEAN DEFAULT false,
     "authorId" INTEGER,
+    "role" "UserRole" NOT NULL,
 
     CONSTRAINT "post_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "user" (
+    "id" SERIAL NOT NULL,
+    "email" TEXT NOT NULL,
+    "name" TEXT,
+    "title" TEXT NOT NULL,
+    "role" "UserRole" NOT NULL,
+
+    CONSTRAINT "user_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateIndex
