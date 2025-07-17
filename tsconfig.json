@@ -4,7 +4,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@internal/*": ["packages/*/src"]
+      "@internal/types/*": ["packages/types/src/*"],
+      "@internal/constants/*": ["packages/constants/src/*"],
+      "@internal/utils/*": ["packages/utils/src/*"]
     }
   }
 }

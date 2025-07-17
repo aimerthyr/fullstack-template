@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { NAME } from '@internal/constants';
+import { NAME } from '@internal/constants/index';
 
 @Injectable()
 export class AppService {

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { add } from '@internal/utils'
+import { add } from '@internal/utils/index'
 import HelloWorld from './components/HelloWorld.vue'
 
 console.log(add(1, 2))
