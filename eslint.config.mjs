@@ -1,3 +1,4 @@
+import { readFile } from 'fs/promises'
 import eslint from '@eslint/js'
 import prettier from 'eslint-config-prettier'
 import unusedImports from 'eslint-plugin-unused-imports'
@@ -5,7 +6,6 @@ import { defineConfig } from 'eslint/config'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
 import vueParser from 'vue-eslint-parser'
-import { readFile } from 'fs/promises'
 
 // web项目的自动导入
 const autoImportFile = new URL('./apps/web/.eslintrc-auto-import.json', import.meta.url)

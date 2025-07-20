@@ -19,5 +19,5 @@
     "noFallthroughCasesInSwitch": true,
     "strict": false
   },
-  "include": ["src/**/*.ts", "./global.d.ts", "../../packages"]
+  "include": ["src/**/*.ts", "./global.d.ts", "../../packages", "prisma.config.ts"]
 }
