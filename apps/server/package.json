@@ -7,7 +7,7 @@
     "prebuild": "pnpm run clean",
     "build": "nest build",
     "start:prod": "dotenv -e .env.production node dist/apps/server/src/main",
-    "start:dev": "docker compose --env-file .env.development up -d &&  nest start --watch --debug --inspect-brk=0.0.0.0:9229",
+    "start:dev": "docker compose --env-file .env.development up -d && prisma generate && nest start --watch --debug --inspect-brk=0.0.0.0:9229",
     "migrate:dev": "dotenv -e .env.development -- prisma migrate dev && prisma generate",
     "reset:dev": "dotenv -e .env.development -- prisma migrate reset"
   },

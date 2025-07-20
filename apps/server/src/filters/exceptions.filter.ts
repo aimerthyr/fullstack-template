@@ -23,12 +23,14 @@ export class ExceptionsFilter implements ExceptionFilter {
     const message =
       exception instanceof HttpException ? exception.getResponse() : 'Internal server error';
 
-    this.logger.error(
-      `HTTP ${status} Error: ${JSON.stringify(message)}`,
-      exception instanceof Error ? exception.stack : 'No stack trace',
-    );
-
-    this.logger.error(`Request: ${request.method} ${request.url}`);
+    // 404 没有必要去 log
+    if (status !== HttpStatus.NOT_FOUND) {
+      this.logger.error(
+        `HTTP ${status} Error: ${JSON.stringify(message)}`,
+        exception instanceof Error ? exception.stack : 'No stack trace',
+      );
+      this.logger.error(`Request: ${request.method} ${request.url}`);
+    }
 
     response.status(status).json({
       statusCode: status,

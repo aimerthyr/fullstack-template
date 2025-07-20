@@ -12,7 +12,7 @@
     "dev:web": "pnpm --filter web dev",
     "build:web": "pnpm --filter web build",
     "format": "prettier -w .",
-    "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx,.vue .",
+    "lint": "eslint --fix .",
     "prepare": "husky"
   },
   "devDependencies": {
