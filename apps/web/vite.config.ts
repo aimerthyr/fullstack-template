@@ -17,4 +17,8 @@ export default defineConfig({
       },
     }),
   ],
+  optimizeDeps: {
+    // 告诉 vite 这个不是依赖，不要预构建，否则第一次启动可能会出现别名解析还没来得及的报错
+    exclude: ['@internal/utils', '@internal/constants', '@internal/types'],
+  },
 })

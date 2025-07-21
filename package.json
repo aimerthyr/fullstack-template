@@ -7,6 +7,7 @@
     "apps/*"
   ],
   "scripts": {
+    "clean": "pnpm --filter web clean && pnpm --filter server clean && rimraf node_modules",
     "dev:server": "pnpm --filter server start:dev",
     "build:server": "pnpm --filter server build",
     "dev:web": "pnpm --filter web dev",

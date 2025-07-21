@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "clean": "rimraf dist",
+    "clean": "rimraf dist & rimraf node_modules",
     "prebuild": "pnpm run clean",
     "build": "nest build",
     "start:prod": "dotenv -e .env.production node dist/apps/server/src/main",

@@ -1,16 +1,4 @@
 {
   "name": "@internal/utils",
-  "version": "1.0.0",
-  "main": "dist/index",
-  "types": "dist/index",
-  "module": "src/index",
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "build": "pnpm run clean && pnpm run compile",
-    "clean": "rimraf ./dist",
-    "compile": "tsc -p tsconfig.build.json",
-    "prepublishOnly": "pnpm run build"
-  }
+  "version": "1.0.0"
 }
